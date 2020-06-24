@@ -8,6 +8,7 @@ import { IRule } from "../assets/constants/rule.constants";
 })
 export class AppComponent {
   public inputsArr: IRule[] = [];
+  public addBtnVisible = true;
 
   public addInput(): void {
     this.inputsArr.push(
@@ -16,9 +17,14 @@ export class AppComponent {
         url: ''
       }
     );
+    this.addBtnVisible = false;
   }
 
   public removeRule(ruleConfig: IRule): void {
     this.inputsArr = this.inputsArr.filter((input) => input.id !== ruleConfig.id);
+  }
+
+  public removeBtn(visible: boolean): void {
+    this.addBtnVisible = visible;
   }
 }

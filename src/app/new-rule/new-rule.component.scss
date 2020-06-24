@@ -22,6 +22,11 @@
   margin-bottom: 1em;
   box-shadow: rgba(0, 0, 0, 0.2) 1px 1px;
   position: relative;
+
+  label {
+    position: relative;
+    display: flex;
+  }
 }
 
 .header-container {
@@ -58,6 +63,11 @@
   background: $block-warning-background;
   padding: 0.7em;
   color: $text-color-warning;
-  width: 100%;
   border-radius: 5px;
+}
+
+@media (max-width: 425px) {
+  .controls-container {
+    flex-direction: column;
+  }
 }
