@@ -1,0 +1,8 @@
+<div>
+  <h4>Where would you like to display your campaign?</h4>
+  <app-new-rule *ngFor="let input of inputsArr"
+                [ruleConfig]="input"
+                (removeRule)="removeRule($event)">
+  </app-new-rule>
+  <button class="add-rule" (click)="addInput()">+ ADD RULE</button>
+</div>
